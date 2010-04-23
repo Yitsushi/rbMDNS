@@ -1,4 +1,7 @@
 rbMDNS - ruby MPD-DBus Notify System
+====================================
+Homepage: http://yitsushi.github.com/rbMDNS
+
 
 0x00 Dependency
   - DBus [http://www.freedesktop.org/wiki/Software/dbus]
@@ -22,3 +25,4 @@ rbMDNS - ruby MPD-DBus Notify System
 
 0x04 But how? Config? Applications? Use?
   See the wiki at http://wiki.github.com/Yitsushi/rbMDNS/
+
