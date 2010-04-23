@@ -1,16 +1,24 @@
+rbMDNS - ruby MPD-DBus Notify System
+
 0x00 Dependency
   - DBus [http://www.freedesktop.org/wiki/Software/dbus]
+  - MPD [http://mpd.wikia.com/wiki/Music_Player_Daemon_Wiki]
   - ruby [http://www.ruby-lang.org/]
   - ruby-dbus [https://trac.luon.net/ruby-dbus/]
   - librmpd [http://librmpd.rubyforge.org/]
+  - YAML [http://ruby-doc.org/core/classes/YAML.html]
 
 0x01 Use
-  $ git clone git://github.com/Yitsushi/mpdDBus.git
-  $ cd mpdDBus
-  $ ruby mpdDBus.rb
+  $ git clone git://github.com/Yitsushi/rbMDNS.git
+  $ cd rbMDNS
+  $ ruby rbMDNS.rb
 
-0x02 Contact
+0x02 Supported applications
+  Kopete
+
+0x03 Contact
   Name: Raito Yitsushi
   Email: yitsushi ]4T] gmail [d0T[ com
 
-  See the wiki at http://wiki.github.com/Yitsushi/mpdDBus/
+0x04 But how? Config? Applications? Use?
+  See the wiki at http://wiki.github.com/Yitsushi/rbMDNS/
