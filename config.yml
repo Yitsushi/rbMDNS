@@ -1,2 +1,5 @@
 applications:
   - kopete
+mpd:
+  host: localhost
+  port: 6600

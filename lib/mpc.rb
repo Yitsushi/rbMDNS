@@ -12,7 +12,10 @@ module MDNS
 
       load_application_handlers
 
-      @mpd = MPD.new('localhost', 6600)
+      @mpd = MPD.new(
+        @config['mpd']['host'],
+        @config['mpd']['port'].to_i
+      )
       @mpd.connect(true)
 
       set_listeners
