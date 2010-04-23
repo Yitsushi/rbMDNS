@@ -1,6 +1,12 @@
 require 'rubygems'
 require 'dbus'
 
+=begin rdoc
+  MDNS::Kopete
+  ---
+  Kopete handler
+  Connect Kopete via DBus
+=end
 module MDNS
   class Kopete
     def initialize

@@ -2,6 +2,18 @@ require 'rubygems'
 require 'librmpd'
 require "lib/config_loader"
 
+=begin rdoc
+  MDNS::MPC
+  ---
+  Connect to Music Player Daemon
+  Register callback functions to 
+    - Change status [play, stop, pause] (MPD::STATE_CALLBACK)
+    - Change song (MPD::CURRENT_SONG_CALLBACK)
+  if MPD::STATE_CALLBACK equal stop
+    then send empty string to applications
+  if MPD::CURRENT_SONG_CALLBACK
+    then send artist and title of the current song to applications
+=end
 module MDNS
   class MPC
     include ConfigLoader
@@ -28,6 +40,7 @@ module MDNS
       @mpd.disconnect
     end
 
+    # callback functions
     def state_callback( newstate )
       if newstate == 'stop'
         send_to_all('')
@@ -38,6 +51,7 @@ module MDNS
       send_to_all("#{song.artist} - #{song.title}")
     end
 
+    # Private functions
     private
     def load_application_handlers
       @config['applications'].each do |app|
@@ -46,6 +60,7 @@ module MDNS
       end
     end
 
+    # send 'message' to applications
     def send_to_all(message)
       puts message if message
       @applications.each do |app|
