@@ -1,0 +1,14 @@
+0x00 Dependency
+  - DBus [http://www.freedesktop.org/wiki/Software/dbus]
+  - ruby [http://www.ruby-lang.org/]
+  - ruby-dbus [https://trac.luon.net/ruby-dbus/]
+  - librmpd [http://librmpd.rubyforge.org/]
+
+0x01 Use
+  $ git clone git://github.com/Yitsushi/mpdDBus.git
+  $ cd mpdDBus
+  $ ruby mpdDBus.rb
+
+0x02 Contact
+  Name: Raito Yitsushi
+  Email: yitsushi ]4T] gmail [d0T[ com

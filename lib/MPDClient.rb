@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'librmpd'
-require 'DBusKopete'
+require 'lib/DBusKopete'
 
 class MPDClient
   def initialize
