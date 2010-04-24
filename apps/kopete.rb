@@ -19,8 +19,8 @@ module MDNS
       @object.introspect
     end
 
-    def send(message)
-      @object.setIdentityOnlineStatus("Online", message)
+    def send(message, status)
+      @object.setIdentityOnlineStatus(status, "#{message}")
     end
   end
 end

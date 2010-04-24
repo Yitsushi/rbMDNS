@@ -48,7 +48,8 @@ module MDNS
     end
 
     def current_callback( song )
-      send_to_all("#{song.artist} - #{song.title}")
+      #send_to_all("#{song.artist} - #{song.title}")
+      send_to_all(generate_satus_message_with_format(song))
     end
 
     # Private functions
@@ -60,11 +61,19 @@ module MDNS
       end
     end
 
+    def generate_satus_message_with_format(song)
+      format = @config['message']['format']
+      format.
+        gsub(/\$\{artist\}/, song.artist).
+        gsub(/\$\{title\}/,  song.title ).
+        gsub(/\$\{album\}/,  song.album )
+    end
+
     # send 'message' to applications
     def send_to_all(message)
       puts message if message
       @applications.each do |app|
-        app.send(message)
+        app.send(message, @config['message']['status'])
       end
     end
 

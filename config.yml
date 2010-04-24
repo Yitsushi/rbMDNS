@@ -3,3 +3,6 @@ applications:
 mpd:
   host: localhost
   port: 6600
+message:
+  format: ". .. ...zzzZ { ${artist} - ${album} } Zzzz... .. ."
+  status: "Busy"

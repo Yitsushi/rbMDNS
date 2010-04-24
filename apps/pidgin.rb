@@ -20,9 +20,9 @@ module MDNS
     end
 
     # set status message without changing the status
-    def send(message)
-      current = @object.PurpleSavedstatusGetType(@object.PurpleSavedstatusGetCurrent())
-      status = @object.PurpleSavedstatusNew("", current)
+    def send(message, tmp)
+      current = @object.PurpleSavedstatusGetType(@object.PurpleSavedstatusGetCurrent()[0])[0]
+      status = @object.PurpleSavedstatusNew("", current)[0]
       @object.PurpleSavedstatusSetMessage(status, message)
       @object.PurpleSavedstatusActivate(status)
     end
