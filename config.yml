@@ -7,7 +7,7 @@ message:
   song:
     format: ". .. ...zzzZ { ${artist} - ${title} } Zzzz... .. ."
     status: "Busy"
-  stat:
+  state:
     stop:
       text:   "I use rbMDNS [http://yitsushi.github.com/rbMDNS/]! Status of my MPD: Stopped"
       status: "Away"

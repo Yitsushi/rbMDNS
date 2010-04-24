@@ -45,8 +45,8 @@ module MDNS
       @state = newstate
       if newstate == 'stop'
         send_to_all(
-          @config['message']['stat']['stop']['text'],
-          @config['message']['stat']['stop']['status']
+          @config['message']['state']['stop']['text'],
+          @config['message']['state']['stop']['status']
         )
       end
     end
