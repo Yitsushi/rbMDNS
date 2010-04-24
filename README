@@ -14,10 +14,12 @@ Homepage: http://yitsushi.github.com/rbMDNS
 0x01 Use
   $ git clone git://github.com/Yitsushi/rbMDNS.git
   $ cd rbMDNS
+  # Edit config.yml
   $ ruby rbMDNS.rb
 
 0x02 Supported applications
   Kopete
+  Pidgin
 
 0x03 Contact
   Name: Raito Yitsushi
