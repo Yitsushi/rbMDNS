@@ -42,6 +42,7 @@ module MDNS
 
     # callback functions
     def state_callback( newstate )
+      @state = newstate
       if newstate == 'stop'
         send_to_all(
           @config['message']['stat']['stop']['text'],
@@ -51,7 +52,7 @@ module MDNS
     end
 
     def current_callback( song )
-      #send_to_all("#{song.artist} - #{song.title}")
+      return if @state == 'stop'
       send_to_all(
         generate_satus_message_with_format(song),
         @config['message']['song']['status']
@@ -84,11 +85,11 @@ module MDNS
     end
 
     def set_listeners
-      state_cb = self.method 'state_callback'
-      @mpd.register_callback(state_cb,  MPD::STATE_CALLBACK)
-
       current_cb = self.method 'current_callback'
       @mpd.register_callback(current_cb, MPD::CURRENT_SONG_CALLBACK)
+      
+      state_cb = self.method 'state_callback'
+      @mpd.register_callback(state_cb,  MPD::STATE_CALLBACK)
     end
   end
 end
