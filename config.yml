@@ -5,7 +5,7 @@ mpd:
   port: 6600
 message:
   song:
-    format: ". .. ...zzzZ { ${artist} - ${album} } Zzzz... .. ."
+    format: ". .. ...zzzZ { ${artist} - ${title} } Zzzz... .. ."
     status: "Busy"
   stat:
     stop:
