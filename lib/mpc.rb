@@ -43,13 +43,19 @@ module MDNS
     # callback functions
     def state_callback( newstate )
       if newstate == 'stop'
-        send_to_all('')
+        send_to_all(
+          @config['message']['stat']['stop']['text'],
+          @config['message']['stat']['stop']['status']
+        )
       end
     end
 
     def current_callback( song )
       #send_to_all("#{song.artist} - #{song.title}")
-      send_to_all(generate_satus_message_with_format(song))
+      send_to_all(
+        generate_satus_message_with_format(song),
+        @config['message']['song']['status']
+      )
     end
 
     # Private functions
@@ -62,7 +68,7 @@ module MDNS
     end
 
     def generate_satus_message_with_format(song)
-      format = @config['message']['format']
+      format = @config['message']['song']['format']
       format.
         gsub(/\$\{artist\}/, song.artist).
         gsub(/\$\{title\}/,  song.title ).
@@ -70,10 +76,10 @@ module MDNS
     end
 
     # send 'message' to applications
-    def send_to_all(message)
+    def send_to_all(message, status)
       puts message if message
       @applications.each do |app|
-        app.send(message, @config['message']['status'])
+        app.send(message, status)
       end
     end
 

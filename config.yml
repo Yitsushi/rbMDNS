@@ -4,5 +4,10 @@ mpd:
   host: localhost
   port: 6600
 message:
-  format: ". .. ...zzzZ { ${artist} - ${album} } Zzzz... .. ."
-  status: "Busy"
+  song:
+    format: ". .. ...zzzZ { ${artist} - ${album} } Zzzz... .. ."
+    status: "Busy"
+  stat:
+    stop:
+      text:   "I use rbMDNS [http://yitsushi.github.com/rbMDNS/]! Status of my MPD: Stopped"
+      status: "Away"
