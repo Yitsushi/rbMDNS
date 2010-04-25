@@ -5,7 +5,8 @@ mpd:
   port: 6600
 message:
   song:
-    format: ". .. ...zzzZ { ${artist} - ${title} } Zzzz... .. ."
+#    format: ". .. ...zzzZ { ${artist} - ${title} } Zzzz... .. ."
+    format: "rbMDNS RulZ! { ${artist} - ${title} } [http://yitsushi.github.com/rbMDNS/]"
     status: "Busy"
   state:
     stop:
