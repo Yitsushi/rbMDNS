@@ -24,6 +24,11 @@ Homepage: http://yitsushi.github.com/rbMDNS
 0x03 Contact
   Name: Raito Yitsushi
   Email: yitsushi ]4T] gmail [d0T[ com
+  IRC:
+    - Server: irc.lacyc3.eu
+    - Port: 6800  (or 6801 with SSL)
+    - Channels: [ #phoenixchat , #ruby , #ruby-hu , #rails , #rails-hu ]
+    - Nick: yitsushi
 
 0x04 But how? Config? Applications? Use?
   See the wiki at http://wiki.github.com/Yitsushi/rbMDNS/

@@ -64,7 +64,6 @@ module MDNS
         generate_satus_message_with_format(song),
         @config['message']['song']['status']
       )
-      puts "D: " + generate_satus_message_with_format(song)
     end
 
     def playlist_callback( playlist )
@@ -97,7 +96,6 @@ module MDNS
 
     def connection_callback( connection )
       puts "Connection Change #{connection}"
-      puts "#{@first_run} #{connection}"
       if @first_run and connection
 #       @mpd.register_callback(self.method('time_callback'),  MPD::TIME_CALLBACK)
         @mpd.register_callback(self.method('volume_callback'),  MPD::VOLUME_CALLBACK)
