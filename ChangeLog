@@ -1,0 +1,49 @@
+2010-05-01  Raito Yitsushi <yitsushi@gmail.com>
+
+  * TODO: Add TODO list
+
+2010-04-28  Raito Yitsushi <yitsushi@gmail.com>
+
+  * README, lib/mpc.rb: Add IRC to contact
+
+2010-04-26  Raito Yitsushi <yitsushi@gmail.com>
+
+  * config.yml, lib/mpc.rb: Add other handlers Fix NoArtist/NoAlbum/NoTitle bug
+
+2010-04-24  Raito Yitsushi <yitsushi@gmail.com>
+
+  * config.yml, lib/mpc.rb: Change stat to state in config... letter miss
+
+  * lib/mpc.rb: Fix: If state if stopped the do not send the current song...
+
+  * config.yml: fomat: album->title
+
+  * config.yml, lib/mpc.rb: Add statChange message && status to config and mpc
+
+  * README: Add Pidgin support to the README
+
+  * apps/kopete.rb, apps/pidgin.rb, config.yml, lib/mpc.rb: Add status and
+  status message format to the config Add Pidgin support
+
+  * apps/pidgin.rb: add pidgin support
+
+2010-04-23  Raito Yitsushi <yitsushi@gmail.com>
+
+  * apps/kopete.rb, lib/config_loader.rb, lib/mpc.rb, rbMDNS.rb: add comments
+  to the source (documentation)
+
+  * README: Add homepage to the README
+
+  * config.yml, lib/mpc.rb: Add datas of MPD to config host, port
+
+  * README, apps/kopete.rb, config.yml, lib/DBusKopete.rb, lib/MPDClient.rb,
+  lib/config_loader.rb, lib/mpc.rb, mpdDBus.rb, rbMDNS.rb: Add namespace
+  (module) [MDNS::] Add config.yml + ConfigLoader Separate libs and app
+  handlers MPD instance into MDNS::MPC Dynamic app loader Update README
+
+  * README: add wiki to the README
+
+  * DBusKopete.rb, MPDClient.rb, README, lib/DBusKopete.rb, lib/MPDClient.rb,
+  mpdDBus.rb, mpdKopete.rb: support only Kopete
+
+  * DBusKopete.rb, MPDClient.rb, mpdKopete.rb: Initial Commit
