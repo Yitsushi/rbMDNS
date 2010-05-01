@@ -36,10 +36,14 @@ module MDNS
     end
 
     def start
-      while true
-        sleep 1
+      begin
+        while true
+          sleep 1
+        end
+      rescue Interrupt => interrupted
+        @mpd.disconnect
+        puts "Bye! Bye!"
       end
-      @mpd.disconnect
     end
 
     # callback functions
