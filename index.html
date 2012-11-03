@@ -1,124 +1,81 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!doctype html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-    <title>ruby MPD-DBus Notify System @ GitHub</title>
-
-    <style type="text/css">
-      body {
-        margin-top: 1.0em;
-        background-color: #b7dac9;
-        font-family: "Helvetica,Arial,FreeSans";
-        color: #000000;
-      }
-      #container {
-        margin: 0 auto;
-        width: 700px;
-      }
-      h1 { font-size: 3.8em; color: #C82536; margin-bottom: 3px; }
-      h1 .small { font-size: 0.4em; }
-      h1 a { text-decoration: none }
-      h2 { font-size: 1.5em; color: #C82536; }
-      h3 { text-align: center; color: #C82536; }
-      a { color: #C82536; }
-      .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-      .download { float: right; }
-      pre { background: #000; color: #fff; padding: 15px;}
-      hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-      .footer { text-align:center; padding-top:30px; font-style: italic; }
-    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Rbmdns by Yitsushi</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   </head>
-
   <body>
-    <a href="http://github.com/Yitsushi/rbMDNS"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/Yitsushi/rbMDNS">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/Yitsushi/rbMDNS/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/Yitsushi/rbMDNS/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-    <div id="container">
+    <div class="wrapper">
 
-      <div class="download">
-        <a href="http://github.com/Yitsushi/rbMDNS/zipball/master">
-          <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-        <a href="http://github.com/Yitsushi/rbMDNS/tarball/master">
-          <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-      </div>
+      <section>
+        <div id="title">
+          <h1>Rbmdns</h1>
+          <p>ruby MPD-DBus Notify System</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/Yitsushi">Yitsushi</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
 
-      <h1><a href="http://github.com/Yitsushi/rbMDNS">rbMDNS</a>
-        <span class="small">by <a href="http://github.com/Yitsushi">Yitsushi</a></span></h1>
+        <h1>rbMDNS - ruby MPD-DBus Notify System</h1>
 
-      <div class="description">
-        ruby MPD-DBus Notify System
-      </div>
+<p>Homepage: <a href="http://yitsushi.github.com/rbMDNS">http://yitsushi.github.com/rbMDNS</a></p>
 
-      <p>This is a "GateWay" between MPD and DBUS...<br />
-      Currently only supported by
-      <strong><a href="http://kopete.kde.org/" target="_blank">Kopete</a></strong>
-      and
-      <strong><a href="http://www.pidgin.im/" target="_blank">Pidgin</a></strong>,
-      but most applications are in process.</p>
+<p>0x00 Dependency</p>
 
-      <h2>Dependencies</h2>
-      <ul>
-        <li>DBus [<a href="http://www.freedesktop.org/wiki/Software/dbus">http://www.freedesktop.org/wiki/Software/dbus</a>]</li>
-        <li>MPD [<a href="http://mpd.wikia.com/wiki/Music_Player_Daemon_Wiki">http://mpd.wikia.com/wiki/Music_Player_Daemon_Wiki</a>]</li>
-        <li>ruby [<a href="http://www.ruby-lang.org/">http://www.ruby-lang.org/</a>]</li>
-        <li>ruby-dbus [<a href="https://trac.luon.net/ruby-dbus/">https://trac.luon.net/ruby-dbus/</a>]</li>
-        <li>librmpd [<a href="http://librmpd.rubyforge.org/">http://librmpd.rubyforge.org/</a>]</li>
-        <li>YAML [<a href="http://ruby-doc.org/core/classes/YAML.html">http://ruby-doc.org/core/classes/YAML.html</a>]</li>
-      </ul>
-      <!--<h2>Install</h2>
-      <p>See wiki</p> -->
-      <h2>Usage</h2>
-        See the <a href="http://wiki.github.com/Yitsushi/rbMDNS/">wiki</a>.
+<ul>
+<li>DBus [<a href="http://www.freedesktop.org/wiki/Software/dbus">http://www.freedesktop.org/wiki/Software/dbus</a>]</li>
+<li>MPD [<a href="http://mpd.wikia.com/wiki/Music_Player_Daemon_Wiki">http://mpd.wikia.com/wiki/Music_Player_Daemon_Wiki</a>]</li>
+<li>ruby [<a href="http://www.ruby-lang.org/">http://www.ruby-lang.org/</a>]</li>
+<li>ruby-dbus [<a href="https://trac.luon.net/ruby-dbus/">https://trac.luon.net/ruby-dbus/</a>]</li>
+<li>librmpd [<a href="http://librmpd.rubyforge.org/">http://librmpd.rubyforge.org/</a>]</li>
+<li>YAML [<a href="http://ruby-doc.org/core/classes/YAML.html">http://ruby-doc.org/core/classes/YAML.html</a>]</li>
+</ul><p>0x01 Use
+  $ git clone git://github.com/Yitsushi/rbMDNS.git
+  $ cd rbMDNS
+  # Edit config.yml
+  $ ruby rbMDNS.rb</p>
 
-      <h2>License</h2>
-      <p>
-        Free your mind ^_^<br />
-        <em>But if you found a bug or you have a feature the tell me.. Thx ;]</em>
-      </p>
+<p>0x02 Supported applications
+  Kopete
+  Pidgin</p>
 
-      <h2>Authors</h2>
-      <p>Raito Yitsushi (yitsushi@gmail.com)<br/><br/></p>
+<p>0x03 Contact
+  Name: Balazs Nadasdi
+  Email: yitsushi ]4T] gmail [d0T[ com
+  IRC:
+    - Server: irc.lacyc3.eu
+    - Port: 6800  (or 6801 with SSL)
+    - Channels: [ #phoenixchat , #ruby , #ruby-hu , #rails , #rails-hu ]
+    - Nick: yitsushi</p>
 
-      <h2>Contact</h2>
-      <p>Raito Yitsushi (yitsushi@gmail.com)<br />
-      IRC:</p>
-      <ul>
-        <li>Server: irc.lacyc3.eu</li>
-        <li>Port: 6800  (or 6801 with SSL)</li>
-        <li>Channels: [ #phoenixchat , #ruby , #ruby-hu , #rails , #rails-hu ]</li>
-        <li>Nick: yitsushi</li>
-      </ul>
-
-      <br />
-
-      <h2>Download</h2>
-      <p>
-      You can download this project in either
-      <a href="http://github.com/Yitsushi/rbMDNS/zipball/master">zip</a> or
-      <a href="http://github.com/Yitsushi/rbMDNS/tarball/master">tar</a> formats.
-      </p>
-      <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/Yitsushi/rbMDNS</pre>
-      </p>
-
-      <div class="footer">
-        get the source code on GitHub : <a href="http://github.com/Yitsushi/rbMDNS">Yitsushi/rbMDNS</a>
-      </div>
+<p>0x04 But how? Config? Applications? Use?
+  See the wiki at <a href="http://wiki.github.com/Yitsushi/rbMDNS/">http://wiki.github.com/Yitsushi/rbMDNS/</a></p>
+      </section>
 
     </div>
-
-    <script type="text/javascript">
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-      try {
-        var pageTracker = _gat._getTracker("UA-16028324-1");
-        pageTracker._trackPageview();
-      } catch(err) {}</script>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
   </body>
 </html>
